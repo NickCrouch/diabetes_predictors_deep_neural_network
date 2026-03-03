@@ -22,12 +22,11 @@ Input data should be in a CSV (or Parquet) with:
 - Columns = predictors (features)
 - A binary target label column such as `diabetes` (0/1)
 
-Example columns (you can adapt):
-- `age`, `bmi`, `glucose`, `insulin`, `blood_pressure`, `pregnancies`, `skin_thickness`, `dpf` (diabetes pedigree function), etc.
-
 ### Example (CSV)
 ```csv
 age,bmi,glucose,blood_pressure,insulin,diabetes
 45,31.2,155,72,130,1
 29,24.8,95,66,85,0
-...
+```
+
+Data for this analysis was taken from the CDC's 2024 Behavioral Risk Factor Surveillance System (BRFSS) collection. 
