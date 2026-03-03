@@ -14,3 +14,20 @@ A small, practical PyTorch project for training a neural network to **predict di
 - Evaluate performance with metrics suited to imbalanced clinical datasets.
 - Interpret predictors using feature importance methods (permutation importance, SHAP, etc.).
 - Provide a reproducible pipeline: data prep → training → evaluation → interpretation.
+
+## Expected Data Format
+
+Input data should be in a CSV (or Parquet) with:
+- One row per patient/visit
+- Columns = predictors (features)
+- A binary target label column such as `diabetes` (0/1)
+
+Example columns (you can adapt):
+- `age`, `bmi`, `glucose`, `insulin`, `blood_pressure`, `pregnancies`, `skin_thickness`, `dpf` (diabetes pedigree function), etc.
+
+### Example (CSV)
+```csv
+age,bmi,glucose,blood_pressure,insulin,diabetes
+45,31.2,155,72,130,1
+29,24.8,95,66,85,0
+...
